@@ -1,0 +1,87 @@
+= crystal-reverse-markdown
+:source-language: crystal
+
+Converts HTML to Markdown. Crystal port of the https://rubygems.org/gems/reverse_markdown[reverse_markdown] Ruby gem (v3.0.2).
+
+== Installation
+
+Add to your `shard.yml`:
+
+[source,yaml]
+----
+dependencies:
+  crystal-reverse-markdown:
+    github: aloli-crystal/crystal-reverse-markdown
+----
+
+== Usage
+
+=== Library
+
+[source]
+----
+require "reverse_markdown"
+
+html = "<h1>Hello</h1><p>A <strong>bold</strong> paragraph.</p>"
+markdown = ReverseMarkdown.convert(html)
+puts markdown
+# => # Hello
+#
+# A **bold** paragraph.
+----
+
+==== Options
+
+[source]
+----
+# Unknown tags: :pass_through (default), :drop, :raise
+ReverseMarkdown.convert(html, unknown_tags: :drop)
+----
+
+=== CLI
+
+[source,bash]
+----
+# Build the CLI
+crystal build bin/crystal-reverse-markdown.cr -o bin/crystal-reverse-markdown
+
+# Convert a file
+crystal-reverse-markdown input.html
+
+# Write to file
+crystal-reverse-markdown input.html -o output.md
+
+# From stdin
+curl https://example.com | crystal-reverse-markdown
+
+# Options
+crystal-reverse-markdown --unknown-tags drop input.html
+----
+
+== Supported elements
+
+[cols="1,1"]
+|===
+| HTML | Markdown
+
+| `<h1>` to `<h6>` | `#` to `######`
+| `<p>` | paragraph
+| `<strong>`, `<b>` | `**bold**`
+| `<em>`, `<i>` | `*italic*`
+| `<del>`, `<s>` | `~~strikethrough~~`
+| `<code>` | `` `inline code` ``
+| `<pre><code>` | fenced code block
+| `<a>` | `[text](url)`
+| `<img>` | `![alt](src)`
+| `<ul>/<li>` | `- item`
+| `<ol>/<li>` | `1. item`
+| `<blockquote>` | `> quote`
+| `<table>` | pipe table
+| `<hr>` | `---`
+| `<br>` | line break
+| `<sup>` | `<sup>text</sup>` (passthrough)
+|===
+
+== License
+
+MIT

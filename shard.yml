@@ -1,0 +1,12 @@
+name: crystal-reverse-markdown
+version: 3.0.2
+
+authors:
+  - Philippe Nénert <philippe@aloli.fr>
+
+description: |
+  Converts HTML to Markdown. Crystal port of the reverse_markdown Ruby gem.
+
+crystal: ">= 1.19.0"
+
+license: MIT

@@ -1,0 +1,9 @@
+/docs/
+/lib/
+/bin/crystal-reverse-markdown
+/.shards/
+*.dwarf
+
+# Libraries don't need lock
+# Dependencies are locked in applications
+shard.lock
