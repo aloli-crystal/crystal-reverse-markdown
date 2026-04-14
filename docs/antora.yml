@@ -1,0 +1,6 @@
+name: crystal-reverse-markdown
+title: 'Reverse Markdown'
+version: '3.0.2'
+nav:
+  - modules/ROOT/nav.adoc
+  - modules/fr/nav.adoc

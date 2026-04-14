@@ -1,0 +1,42 @@
+= Reverse Markdown
+
+Convertit du HTML en Markdown. Portage Crystal du gem Ruby https://rubygems.org/gems/reverse_markdown[reverse_markdown] (v3.0.2).
+
+== Fonctionnalites
+
+* Conversion HTML vers Markdown
+* Titres, paragraphes, gras, italique, texte barre
+* Code en ligne et blocs de code
+* Liens, images
+* Listes ordonnees et non ordonnees
+* Citations, tableaux, lignes horizontales
+* Gestion configurable des balises inconnues
+* Interface en ligne de commande avec support stdin
+
+== Elements supportes
+
+[cols="1,1"]
+|===
+| HTML | Markdown
+
+| `<h1>` a `<h6>` | `#` a `######`
+| `<p>` | paragraphe
+| `<strong>`, `<b>` | `**gras**`
+| `<em>`, `<i>` | `*italique*`
+| `<del>`, `<s>` | `~~barre~~`
+| `<code>` | `` `code en ligne` ``
+| `<pre><code>` | bloc de code
+| `<a>` | `[texte](url)`
+| `<img>` | `![alt](src)`
+| `<ul>/<li>` | `- element`
+| `<ol>/<li>` | `1. element`
+| `<blockquote>` | `> citation`
+| `<table>` | tableau en pipes
+| `<hr>` | `---`
+| `<br>` | saut de ligne
+| `<sup>` | `<sup>texte</sup>` (passthrough)
+|===
+
+== Licence
+
+MIT

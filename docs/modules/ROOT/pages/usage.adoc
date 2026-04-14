@@ -1,0 +1,43 @@
+= Usage
+
+== Library
+
+[source,crystal]
+----
+require "reverse_markdown"
+
+html = "<h1>Hello</h1><p>A <strong>bold</strong> paragraph.</p>"
+markdown = ReverseMarkdown.convert(html)
+puts markdown
+# => # Hello
+#
+# A **bold** paragraph.
+----
+
+=== Options
+
+[source,crystal]
+----
+# Unknown tags: :pass_through (default), :drop, :raise
+ReverseMarkdown.convert(html, unknown_tags: :drop)
+----
+
+== CLI
+
+[source,bash]
+----
+# Build the CLI
+crystal build bin/crystal-reverse-markdown.cr -o bin/crystal-reverse-markdown
+
+# Convert a file
+crystal-reverse-markdown input.html
+
+# Write to file
+crystal-reverse-markdown input.html -o output.md
+
+# From stdin
+curl https://example.com | crystal-reverse-markdown
+
+# Options
+crystal-reverse-markdown --unknown-tags drop input.html
+----

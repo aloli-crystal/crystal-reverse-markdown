@@ -1,0 +1,19 @@
+= Installation
+
+== Add the Dependency
+
+Add crystal-reverse-markdown to your `shard.yml`:
+
+[source,yaml]
+----
+dependencies:
+  crystal-reverse-markdown:
+    github: aloli-crystal/crystal-reverse-markdown
+----
+
+Then run:
+
+[source,bash]
+----
+shards install
+----
