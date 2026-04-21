@@ -1,6 +1,7 @@
 /docs/api/
 /lib/
-/bin/crystal-reverse-markdown
+/bin/*
+!/bin/crystal-reverse-markdown.cr
 /.shards/
 *.dwarf
 
