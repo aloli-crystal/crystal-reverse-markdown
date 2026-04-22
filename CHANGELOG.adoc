@@ -1,0 +1,9 @@
+= Changelog
+:toc: left
+:toc-title: Versions
+:toclevels: 2
+
+== v3.0.2.1 — 2026-04-22
+
+* Add the *ameba* linter to the CI pipeline with a shared `.ameba.yml` config aligned with the Crystal ecosystem.
+* Tighten `.gitignore` to exclude all `/bin/*` artefacts except the CLI source.

@@ -1,0 +1,9 @@
+= Journal des modifications
+:toc: left
+:toc-title: Versions
+:toclevels: 2
+
+== v3.0.2.1 — 2026-04-22
+
+* Ajout du linter *ameba* à la CI avec configuration `.ameba.yml` partagée alignée sur l'écosystème Crystal.
+* Resserrement du `.gitignore` pour exclure l'ensemble des artefacts `/bin/*` hors source du CLI.
