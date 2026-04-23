@@ -10,7 +10,7 @@ require "./reverse_markdown/converter"
 # # => "# Hello\n\n"
 # ```
 module ReverseMarkdown
-  VERSION          = "3.0.2"
+  VERSION          = "3.0.2.2"
   UPSTREAM_VERSION = "3.0.2"
 
   # Defines how unknown HTML tags are handled.

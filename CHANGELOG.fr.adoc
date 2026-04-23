@@ -3,6 +3,30 @@
 :toc-title: Versions
 :toclevels: 2
 
+== v3.0.2.2 — 2026-04-23
+
+Suite de tests d'intégration pour le pipeline HTML → Markdown, en
+complément des specs unitaires par balise. Une fixture HTML réaliste
+de style article fait un aller-retour à travers
+`ReverseMarkdown.convert` et la sortie Markdown est contrôlée sur
+ses marqueurs structurels (titres ATX, blocs de code fenced, listes,
+citations, tableaux, liens) ainsi que sur ses invariants de document
+(séparation des paragraphes, ordre des titres, déterminisme, pas de
+contenu `<head>` résiduel, commentaires supprimés, markup inline
+imbriqué).
+
+* 3 nouveaux fichiers de specs sous `spec/integration/` : **sanity**
+  (trailing newline, mots préservés, pas de balises résiduelles,
+  déterminisme), **full_document** (fixture `article.html` →
+  Markdown avec tous les marqueurs attendus) et **structure**
+  (séparation paragraphes/titres, `<head>` et commentaires ignorés,
+  strong+em imbriqués). **11 tests d'intégration, 56 tests
+  unitaires, 67 au total — tous verts.**
+* Nouveau helper `IntegrationHelper` dans
+  `spec/integration/spec_helper.cr` avec les primitives `convert`
+  et `fixture`, et une fixture
+  `spec/integration/fixtures/article.html`.
+
 == v3.0.2.1 — 2026-04-22
 
 * Ajout du linter *ameba* à la CI avec configuration `.ameba.yml` partagée alignée sur l'écosystème Crystal.
