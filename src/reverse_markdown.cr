@@ -10,7 +10,15 @@ require "./reverse_markdown/converter"
 # # => "# Hello\n\n"
 # ```
 module ReverseMarkdown
-  VERSION          = "3.0.2.2"
+  # Lue au compile-time depuis `shard.yml` via le macro `read_file`.
+  # Cf. note mémoire `feedback_shard_version_macro.md` (mémoire ALOLI).
+  VERSION = {{
+              (read_file("#{__DIR__}/../shard.yml")
+                .lines
+                .find(&.starts_with?("version:")) || "version: 0.0.0")
+                .gsub(/^version:\s*/, "")
+                .chomp
+            }}
   UPSTREAM_VERSION = "3.0.2"
 
   # Defines how unknown HTML tags are handled.
