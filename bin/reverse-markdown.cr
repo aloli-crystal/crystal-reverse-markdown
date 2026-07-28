@@ -5,7 +5,7 @@ output_file : String? = nil
 unknown_tags = ReverseMarkdown::UnknownTags::PassThrough
 
 parser = OptionParser.new do |p|
-  p.banner = "Usage: crystal-reverse-markdown [options] [input.html]"
+  p.banner = "Usage: reverse-markdown [options] [input.html]"
 
   p.on("-o FILE", "--output FILE", "Write output to FILE instead of stdout") do |file|
     output_file = file
@@ -23,7 +23,7 @@ parser = OptionParser.new do |p|
   end
 
   p.on("-v", "--version", "Show version") do
-    puts "crystal-reverse-markdown #{ReverseMarkdown::VERSION} (upstream: #{ReverseMarkdown::UPSTREAM_VERSION})"
+    puts "reverse-markdown #{ReverseMarkdown::VERSION} (upstream: #{ReverseMarkdown::UPSTREAM_VERSION})"
     exit
   end
 

@@ -3,6 +3,14 @@
 :toc-title: Versions
 :toclevels: 2
 
+== v3.0.2.4 — 2026-07-28
+
+* Rename the shard `crystal-reverse-markdown` → `reverse-markdown` (drop the
+  `crystal-` prefix; the `aloli-crystal` org already carries the "Crystal"
+  context).
+* Rename the CLI entry file `bin/crystal-reverse-markdown.cr` →
+  `bin/reverse-markdown.cr`.
+
 == v3.0.2.2 — 2026-04-23
 
 Integration test suite for the HTML → Markdown pipeline, on top of

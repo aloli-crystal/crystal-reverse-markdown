@@ -2,13 +2,14 @@
 
 == Ajouter la dependance
 
-Ajoutez crystal-reverse-markdown dans votre `shard.yml` :
+Ajoutez reverse-markdown dans votre `shard.yml` :
 
 [source,yaml]
 ----
 dependencies:
-  crystal-reverse-markdown:
-    github: aloli-crystal/crystal-reverse-markdown
+  reverse-markdown:
+    github: aloli-crystal/reverse-markdown
+    version: "~> 3.0.2.4"
 ----
 
 Puis lancez :

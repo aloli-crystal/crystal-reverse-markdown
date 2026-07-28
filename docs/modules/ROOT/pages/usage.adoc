@@ -27,17 +27,17 @@ ReverseMarkdown.convert(html, unknown_tags: :drop)
 [source,bash]
 ----
 # Build the CLI
-crystal build bin/crystal-reverse-markdown.cr -o bin/crystal-reverse-markdown
+crystal build bin/reverse-markdown.cr -o bin/reverse-markdown
 
 # Convert a file
-crystal-reverse-markdown input.html
+reverse-markdown input.html
 
 # Write to file
-crystal-reverse-markdown input.html -o output.md
+reverse-markdown input.html -o output.md
 
 # From stdin
-curl https://example.com | crystal-reverse-markdown
+curl https://example.com | reverse-markdown
 
 # Options
-crystal-reverse-markdown --unknown-tags drop input.html
+reverse-markdown --unknown-tags drop input.html
 ----

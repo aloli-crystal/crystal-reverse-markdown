@@ -1,4 +1,4 @@
-= crystal-reverse-markdown
+= reverse-markdown
 :source-language: crystal
 
 Convertit du HTML en Markdown. Portage Crystal du gem Ruby https://rubygems.org/gems/reverse_markdown[reverse_markdown] (v3.0.2).
@@ -10,8 +10,9 @@ Ajouter dans votre `shard.yml` :
 [source,yaml]
 ----
 dependencies:
-  crystal-reverse-markdown:
-    github: aloli-crystal/crystal-reverse-markdown
+  reverse-markdown:
+    github: aloli-crystal/reverse-markdown
+    version: "~> 3.0.2.4"
 ----
 
 == Utilisation
@@ -43,19 +44,19 @@ ReverseMarkdown.convert(html, unknown_tags: :drop)
 [source,bash]
 ----
 # Compiler le CLI
-crystal build bin/crystal-reverse-markdown.cr -o bin/crystal-reverse-markdown
+crystal build bin/reverse-markdown.cr -o bin/reverse-markdown
 
 # Convertir un fichier
-crystal-reverse-markdown input.html
+reverse-markdown input.html
 
 # Écrire dans un fichier
-crystal-reverse-markdown input.html -o output.md
+reverse-markdown input.html -o output.md
 
 # Depuis stdin
-curl https://example.com | crystal-reverse-markdown
+curl https://example.com | reverse-markdown
 
 # Options
-crystal-reverse-markdown --unknown-tags drop input.html
+reverse-markdown --unknown-tags drop input.html
 ----
 
 == Éléments supportés

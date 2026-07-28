@@ -1,5 +1,5 @@
-name: crystal-reverse-markdown
-version: 3.0.2.3
+name: reverse-markdown
+version: 3.0.2.4
 
 authors:
   - Philippe Nénert <philippe@aloli.fr>

@@ -48,7 +48,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: title,
-                body: `A new version of the [reverse_markdown](https://rubygems.org/gems/reverse_markdown) Ruby gem (${version}) has been released.\n\nReview the changes and update crystal-reverse-markdown accordingly.`,
+                body: `A new version of the [reverse_markdown](https://rubygems.org/gems/reverse_markdown) Ruby gem (${version}) has been released.\n\nReview the changes and update reverse-markdown accordingly.`,
                 labels: ['upstream']
               });
             }

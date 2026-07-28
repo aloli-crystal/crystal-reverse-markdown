@@ -34,4 +34,4 @@ jobs:
         run: bin/ameba
 
       - name: Build CLI
-        run: crystal build bin/crystal-reverse-markdown.cr -o bin/crystal-reverse-markdown
+        run: crystal build bin/reverse-markdown.cr -o bin/reverse-markdown
